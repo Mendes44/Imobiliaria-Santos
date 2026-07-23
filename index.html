@@ -1,65 +1,163 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    /!* Imobiliaria Santos - index.html *!/
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" name="Imobiliaria">
-    <link rel="stylesheet" href="estilo.css">
-    <title>Imobiliaria Santos</title>
-</head>
-<body>
-    <div class="secao1" id="topo">
-        <img class="logo" src="img/logo.png" alt="Imobiliaria Santos">
-        <p class="nav">
-            <a class="links-nav" href="#sobre">Sobre</a>
-            <a class="links-nav" href="#servico">Serviços</a>
-            <a class="links-nav" href="#corretores">Corretores</a>
-            <a class="links-nav" href="#contato">Contato</a>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/ImobiliariaSantos.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imobiliária Santos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/estilo.css" />
+  </head>
+  <body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner container">
+        <a href="#" class="logo-link">
+          <img src="/img/logo.png" alt="Imobiliária Santos" class="logo-img" />
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="siteNav">
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#corretores">Corretores</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img
+        src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1400"
+        alt="Casa residencial"
+        class="hero-img"
+      />
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1>Encontre o imóvel dos seus sonhos</h1>
+          <p>A imobiliária que te ajuda no sonho do seu imóvel</p>
+          <a href="#servicos" class="btn-hero">Conheça nossos serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre" id="sobre">
+      <div class="container sobre-grid">
+        <div class="sobre-img-wrap">
+          <img
+            src="https://images.pexels.com/photos/7578884/pexels-photo-7578884.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Contrato e chaves de imóvel"
+            class="sobre-img"
+          />
+        </div>
+        <div class="sobre-text">
+          <h2>Sobre a <span class="yellow">Imobiliária Santos</span></h2>
+          <p>
+            Há <strong class="yellow">10 anos</strong> no ramo temos conquistado a confiança de
+            <strong class="yellow">inúmeros clientes</strong>. Isso porque procuramos sempre as
+            melhores condições tanto para quem quer comprar, como para quem quer vender ou alugar.
+            Oferecemos um <strong class="blue">serviço de qualidade</strong> servindo como ponte
+            entre as partes interessadas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos" id="servicos">
+      <div class="container">
+        <h2 class="section-title">SERVIÇOS</h2>
+        <p class="section-intro">
+          Contamos com diversos <strong class="yellow">serviços imobiliários</strong> e também
+          prestamos suporte em cada uma das etapas necessárias de cada serviço. Aqui na
+          <strong class="yellow">Imobiliária Santos</strong> podemos te ajudar com a seguinte gama
+          de assuntos relativos a imóveis:
         </p>
-    </div>
-    <div class="secao2-banner-foto">
-        <img class="banner" src="img/banner.jpg" alt="Banner-Casa">
-    </div>
-    <div class="secao3-sobre" id="sobre">
-        <h1>Encontre o imóvel dos seus sonhos</h1>
-        <h2>A imobiliária que te ajuda no sonho do seu imóvel</h2>
-        <img class="imagem-assinatura" src="img/imovel-assinatura.jpg">
-        <p class="p-sobre">
-            Há <span class="texto-azul">10 anos</span> no ramo temos conquistado a confiança de <span class="texto-azul">inúmeros clientes.</span> Isso porque procuramos sempre as melhores condições tanto para quem quer comprar, como para quem quer vender ou alugar. Oferecemos um <span class="texto-azul">serviço de qualidade</span> servindo como ponte entre as partes interessadas.
-        </p>
-    </div>
-    <div class="secao4-servico" id="servico">
-        <h3>SERVIÇOS</h3>
-        <p class="p-servico">
-            Contamos com diversos <span class="texto-amarelo">serviços imobiliários</span> e também prestamos suporte em cada uma das etapas necessárias de cada serviço. Aqui na <span class="texto-amarelo">Imobiliária Santos</span> podemos te ajudar com a seguinte gama de assuntos relativos a imóveis:
-        </p>
-            <ul class="lista-servico">
-                <li class="li-servico">Venda</li>
-                <li class="li-servico">Aluguel</li>
-                <li class="li-servico">Financiamento</li>
-                <li class="li-servico">Parcerias</li>
-            </ul>
-    </div>
-    <div class="secao5-corretores" id="corretores">
-        <h2>CORRETORES</h2>
-        <img class="img-corretores" src="img/corretores.jpg" alt="Corretores">
-        <p class="p-corretores">
-            A <span class="texto-azul">imobiliária Santos</span> conta com um time de profissionais qualificados que têm vários anos de experiência no mercado. Para entrar em contato com um de nossos corretores, basta clicar no link a seguir: 
-            <a href="mailto:corretores@gmail.com">Corretores</a>
-        </p>
-    </div>
-    <div class="secao6-contato" id="contato">
-        <h3>CONTATO</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240097.52708246448!2d-44.12886892502278!3d-19.902317554732374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690cacacf2c33%3A0x5b35795e3ad23997!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1717039934637!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p class="p-contato">
-            Se ficou interessado em nos conhecer ou se tiver dúvidas entre em <span class="texto-amarelo">contato</span> conosco através de um dos telefones abaixo:
-        </p>
-            <ul class="lista-contato" type="none">
-                <li class="li-contato"><a class="link-contato" href="tel:123456789">Escritorio Belo Horizonte</a></li>
-                <li class="li-contato"><a class="link-contato" href="tel:123456789">Escritorio Centro/RJ</a></li>
-                <li class="li-contato"><a class="link-contato" href="tel:123456789">Escritorio Meier</a></li>
-            </ul>
-    </div>
-</body>
+        <ul class="service-list">
+          <li>
+            <div class="service-icon">&#127968;</div>
+            <span>Venda</span>
+          </li>
+          <li>
+            <div class="service-icon">&#128273;</div>
+            <span>Aluguel</span>
+          </li>
+          <li>
+            <div class="service-icon">&#128176;</div>
+            <span>Financiamento</span>
+          </li>
+          <li>
+            <div class="service-icon">&#129309;</div>
+            <span>Parcerias</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CORRETORES -->
+    <section class="corretores" id="corretores">
+      <div class="container corretores-grid">
+        <div class="corretores-img-wrap">
+          <img
+            src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=700"
+            alt="Corretor de imóveis"
+            class="corretores-img"
+          />
+        </div>
+        <div class="corretores-text">
+          <h2 class="section-title left blue-title">CORRETORES</h2>
+          <p>
+            A <strong class="blue">imobiliária Santos</strong> conta com um time de profissionais
+            qualificados que têm vários anos de experiência no mercado. Para entrar em contato com
+            um de nossos corretores, basta clicar no link a seguir:
+            <a href="#contato" class="link-blue">Corretores</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato" id="contato">
+      <div class="container">
+        <h2 class="section-title">CONTATO</h2>
+        <div class="map-wrap">
+          <iframe
+            title="Localização Belo Horizonte"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234952.5455476862!2d-44.09993!3d-19.9166813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690c5f5f9559b%3A0x5b1b6fecc7b4a72b!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt!2sbr!4v1690000000000"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="contato-box">
+          <p>
+            Se ficou interessado em nos conhecer ou se tiver dúvidas entre em
+            <strong class="yellow">contato</strong> conosco através de um dos telefones abaixo:
+          </p>
+        </div>
+        <div class="escritorios">
+          <a href="tel:+553132000001" class="escritorio-link">Escritório Belo Horizonte</a>
+          <a href="tel:+552132000002" class="escritorio-link">Escritório Centro/RJ</a>
+          <a href="tel:+553132000003" class="escritorio-link">Escritório Meier</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Imobiliária Santos. Todos os direitos reservados.</p>
+        <p>&copy; DevMendes 2026</p>
+      </div>
+    </footer>
+
+    <script src="/main.js" type="module"></script>
+  </body>
 </html>
