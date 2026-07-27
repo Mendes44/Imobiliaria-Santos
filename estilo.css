@@ -78,7 +78,7 @@ a {
 }
 
 .logo-img {
-  height: 64px;
+  height: 80px;
   width: auto;
   border-radius: var(--radius);
   object-fit: contain;
@@ -417,10 +417,27 @@ a {
   text-decoration: underline;
   font-size: 0.95rem;
   transition: color 0.2s;
+  margin-bottom: 0.5rem;
 }
 
 .escritorio-link:hover {
   color: var(--white);
+}
+
+.btn-zap {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #199f4a;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius); 
+}
+
+.btn-zap:hover {
+  background: #0f7a36;
+
 }
 
 /* =========================================
