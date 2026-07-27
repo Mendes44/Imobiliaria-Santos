@@ -1,168 +1,329 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/ImobiliariaSantos.jpeg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imobiliária Santos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/estilo.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imobiliária Santos – Encontre o Imóvel dos Seus Sonhos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
 
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="header-inner container">
-        <a href="#" class="logo-link">
-          <img src="/img/logo.png" alt="Imobiliária Santos" class="logo-img" />
-        </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="site-nav" id="siteNav">
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#corretores">Corretores</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#inicio" class="navbar__logo">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="44" height="44" rx="6" fill="#C9A55A"/>
+          <path d="M22 8L10 19v1h3v14h7v-9h4v9h7V20h3v-1L22 8z" fill="#1A2E4A"/>
+          <path d="M19 29v-8h6v8" stroke="#1A2E4A" stroke-width="0.5"/>
+        </svg>
+        <span class="navbar__brand">
+          <span class="navbar__brand-top">IMOBILIÁRIA</span>
+          <span class="navbar__brand-bottom">SANTOS</span>
+        </span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu" aria-label="Navegação principal">
+        <a href="#inicio" class="navbar__link">Início</a>
+        <a href="#sobre" class="navbar__link">Sobre</a>
+        <a href="#servicos" class="navbar__link">Serviços</a>
+        <a href="#corretores" class="navbar__link">Corretores</a>
+        <a href="#contato" class="navbar__link navbar__link--cta">Contato</a>
+      </nav>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg" style="background-image:url('https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1920')"></div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow reveal">Bem-vindo à Imobiliária Santos</p>
+      <h1 class="hero__title reveal reveal--delay-1">Encontre o Imóvel<br><em>dos Seus Sonhos</em></h1>
+      <p class="hero__subtitle reveal reveal--delay-2">A imobiliária que te ajuda no sonho do seu imóvel</p>
+      <div class="hero__actions reveal reveal--delay-3">
+        <a href="#servicos" class="btn btn--primary">Nossos Serviços</a>
+        <a href="#contato" class="btn btn--outline">Fale Conosco</a>
       </div>
-    </header>
+    </div>
+    <a href="#sobre" class="hero__scroll-down" aria-label="Rolar para baixo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
 
-    <!-- HERO -->
-    <section class="hero">
-      <img
-        src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1400"
-        alt="Casa residencial"
-        class="hero-img"
-      />
-      <div class="hero-overlay">
-        <div class="hero-text">
-          <h1>Encontre o imóvel dos seus sonhos</h1>
-          <p>A imobiliária que te ajuda no sonho do seu imóvel</p>
-          <a href="#servicos" class="btn-hero">Conheça nossos serviços</a>
+  <!-- ========== STATS ========== -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stats__item">
+        <span class="stats__number" data-target="10">0</span><span class="stats__symbol">+</span>
+        <p class="stats__label">Anos de Experiência</p>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number" data-target="500">0</span><span class="stats__symbol">+</span>
+        <p class="stats__label">Imóveis Vendidos</p>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number" data-target="1200">0</span><span class="stats__symbol">+</span>
+        <p class="stats__label">Clientes Satisfeitos</p>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number" data-target="30">0</span><span class="stats__symbol">+</span>
+        <p class="stats__label">Corretores Especializados</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section class="about section" id="sobre">
+    <div class="container about__inner">
+      <div class="about__image-wrap fade-in">
+        <img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Imóvel de qualidade" class="about__img" loading="lazy" />
+        <div class="about__badge">
+          <span class="about__badge-num">10</span>
+          <span class="about__badge-text">Anos no<br>Mercado</span>
         </div>
       </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section class="sobre" id="sobre">
-      <div class="container sobre-grid">
-        <div class="sobre-img-wrap">
-          <img
-            src="https://images.pexels.com/photos/7578884/pexels-photo-7578884.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Contrato e chaves de imóvel"
-            class="sobre-img"
-          />
-        </div>
-        <div class="sobre-text">
-          <h2>Sobre a <span class="yellow">Imobiliária Santos</span></h2>
-          <p>
-            Há <strong class="yellow">10 anos</strong> no ramo temos conquistado a confiança de
-            <strong class="yellow">inúmeros clientes</strong>. Isso porque procuramos sempre as
-            melhores condições tanto para quem quer comprar, como para quem quer vender ou alugar.
-            Oferecemos um <strong class="blue">serviço de qualidade</strong> servindo como ponte
-            entre as partes interessadas.
-          </p>
-        </div>
+      <div class="about__text slide-in-right">
+        <span class="section-eyebrow">Sobre Nós</span>
+        <h2 class="section-title">Encontre o imóvel<br><em>dos seus sonhos</em></h2>
+        <p class="about__lead">A imobiliária que te ajuda no sonho do seu imóvel.</p>
+        <p class="about__body">Há 10 anos no ramo temos conquistado a confiança de inúmeros clientes. Isso porque procuramos sempre as melhores condições tanto para quem quer comprar, como para quem quer vender ou alugar. Oferecemos um serviço de qualidade servindo como ponte entre as partes interessadas.</p>
+        <a href="#contato" class="btn btn--primary">Saiba Mais</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SERVIÇOS -->
-    <section class="servicos" id="servicos">
-      <div class="container">
+  <!-- ========== SERVIÇOS ========== -->
+  <section class="services section section--alt" id="servicos">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-eyebrow">O Que Oferecemos</span>
         <h2 class="section-title">SERVIÇOS</h2>
-        <p class="section-intro">
-          Contamos com diversos <strong class="yellow">serviços imobiliários</strong> e também
-          prestamos suporte em cada uma das etapas necessárias de cada serviço. Aqui na
-          <strong class="yellow">Imobiliária Santos</strong> podemos te ajudar com a seguinte gama
-          de assuntos relativos a imóveis:
-        </p>
-        <ul class="service-list">
-          <li>
-            <div class="service-icon">&#127968;</div>
-            <span>Venda</span>
-          </li>
-          <li>
-            <div class="service-icon">&#128273;</div>
-            <span>Aluguel</span>
-          </li>
-          <li>
-            <div class="service-icon">&#128176;</div>
-            <span>Financiamento</span>
-          </li>
-          <li>
-            <div class="service-icon">&#129309;</div>
-            <span>Parcerias</span>
-          </li>
+        <p class="section-desc">Contamos com diversos serviços imobiliários e também prestamos suporte em cada uma das etapas necessárias de cada serviço. Aqui na Imobiliária Santos podemos te ajudar com a seguinte gama de assuntos relativos a imóveis:</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="service-card fade-in">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4L6 20v2h4v22h11V32h6v12h11V22h4v-2L24 4z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Compra de Imóveis</h3>
+          <p class="service-card__desc">Encontramos o imóvel ideal para você com as melhores condições do mercado.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/><path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M17 30l4-4M31 30l-4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Venda de Imóveis</h3>
+          <p class="service-card__desc">Avaliamos e vendemos seu imóvel pelo melhor preço com agilidade e segurança.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 20a8 8 0 1 0-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M28 28l12 12M34 12l2 6-6 2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Locação</h3>
+          <p class="service-card__desc">Alugue seu imóvel com segurança jurídica e total suporte durante o processo.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M14 32l8-10 6 6 6-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Avaliação Imobiliária</h3>
+          <p class="service-card__desc">Laudo técnico preciso para você conhecer o valor real do seu patrimônio.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="14" width="28" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M18 14v-4a6 6 0 0 1 12 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="25" r="3" stroke="currentColor" stroke-width="2.5"/></svg>
+          </div>
+          <h3 class="service-card__title">Consultoria Imobiliária</h3>
+          <p class="service-card__desc">Orientação especializada em todas as etapas da negociação imobiliária.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 36V18l16-10 16 10v18H8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M18 36v-10h12v10" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 22h4M30 22h4M14 28h4M30 28h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="service-card__title">Financiamento</h3>
+          <p class="service-card__desc">Apoio completo na busca pelo melhor crédito imobiliário para seu perfil.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CORRETORES ========== -->
+  <section class="agents section" id="corretores">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-eyebrow">Nossa Equipe</span>
+        <h2 class="section-title">CORRETORES</h2>
+        <p class="section-desc">A imobiliária Santos conta com um time de profissionais qualificados que têm vários anos de experiência no mercado. Para entrar em contato com um de nossos corretores, basta clicar no link a seguir: <a href="#contato" class="text-link">Corretores</a></p>
+      </div>
+      <div class="agents__grid">
+
+        <div class="agent-card fade-in">
+          <div class="agent-card__img-wrap">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Carlos Santos" loading="lazy" />
+            <div class="agent-card__overlay">
+              <a href="#contato" class="btn btn--sm btn--primary">Entrar em Contato</a>
+            </div>
+          </div>
+          <div class="agent-card__info">
+            <h3 class="agent-card__name">Carlos Santos</h3>
+            <p class="agent-card__role">Corretor Sênior – CRECI 12345-F</p>
+          </div>
+        </div>
+
+        <div class="agent-card fade-in">
+          <div class="agent-card__img-wrap">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ana Oliveira" loading="lazy" />
+            <div class="agent-card__overlay">
+              <a href="#contato" class="btn btn--sm btn--primary">Entrar em Contato</a>
+            </div>
+          </div>
+          <div class="agent-card__info">
+            <h3 class="agent-card__name">Ana Oliveira</h3>
+            <p class="agent-card__role">Especialista em Imóveis de Luxo – CRECI 67890-F</p>
+          </div>
+        </div>
+
+        <div class="agent-card fade-in">
+          <div class="agent-card__img-wrap">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Roberto Lima" loading="lazy" />
+            <div class="agent-card__overlay">
+              <a href="#contato" class="btn btn--sm btn--primary">Entrar em Contato</a>
+            </div>
+          </div>
+          <div class="agent-card__info">
+            <h3 class="agent-card__name">Roberto Lima</h3>
+            <p class="agent-card__role">Corretor Residencial – CRECI 11223-F</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO ========== -->
+  <section class="contact section section--alt" id="contato">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-eyebrow">Fale Conosco</span>
+        <h2 class="section-title">CONTATO</h2>
+        <p class="section-desc">Se ficou interessado em nos conhecer ou se tiver dúvidas entre em contato conosco através de um dos telefones abaixo:</p>
+      </div>
+      <div class="contact__inner">
+        <div class="contact__map fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7346.254844548052!2d-43.364712467659004!3d-22.98234139602229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda2ed54ec2e1%3A0x4431d262cad1d163!2sAv.%20Ayrton%20Senna%2C%203000%20-%20Barra%20da%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022775-904!5e0!3m2!1spt-BR!2sbr!4v1642532754862!5m2!1spt-BR!2sbr"
+            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+            title="Localização Imobiliária Santos">
+          </iframe>
+        </div>
+        <div class="contact__details slide-in-right">
+          <h3 class="contact__details-title">Informações de Contato</h3>
+          <ul class="contact__list">
+            <li class="contact__item">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>Av. Ayrton Senna, 3000 – Barra da Tijuca,<br>Rio de Janeiro – RJ</span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.13 1 .37 1.97.7 2.9a2 2 0 0 1-.45 2.11L7.91 9.91A16 16 0 0 0 14.09 16.09l.91-.85a2 2 0 0 1 2.11-.45c.93.33 1.9.57 2.9.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span>(21) 3000-0000</span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.13 1 .37 1.97.7 2.9a2 2 0 0 1-.45 2.11L7.91 9.91A16 16 0 0 0 14.09 16.09l.91-.85a2 2 0 0 1 2.11-.45c.93.33 1.9.57 2.9.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span>(21) 99999-9999</span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <span>contato@imobiliariasantos.com.br</span>
+            </li>
+          </ul>
+          <div class="contact__hours">
+            <h4>Horário de Atendimento</h4>
+            <p>Segunda a Sexta: 9h – 18h</p>
+            <p>Sábado: 9h – 13h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="navbar__logo footer__logo">
+          <svg width="40" height="40" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="44" height="44" rx="6" fill="#C9A55A"/>
+            <path d="M22 8L10 19v1h3v14h7v-9h4v9h7V20h3v-1L22 8z" fill="#1A2E4A"/>
+          </svg>
+          <span class="navbar__brand">
+            <span class="navbar__brand-top" style="color:#C9A55A">IMOBILIÁRIA</span>
+            <span class="navbar__brand-bottom" style="color:#fff">SANTOS</span>
+          </span>
+        </a>
+        <p class="footer__tagline">Realizando sonhos há mais de 10 anos no mercado imobiliário carioca.</p>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Links Rápidos</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#corretores">Corretores</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
-    </section>
-
-    <!-- CORRETORES -->
-    <section class="corretores" id="corretores">
-      <div class="container corretores-grid">
-        <div class="corretores-img-wrap">
-          <img
-            src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=700"
-            alt="Corretor de imóveis"
-            class="corretores-img"
-          />
-        </div>
-        <div class="corretores-text">
-          <h2 class="section-title left blue-title">CORRETORES</h2>
-          <p>
-            A <strong class="blue">imobiliária Santos</strong> conta com um time de profissionais
-            qualificados que têm vários anos de experiência no mercado. Para entrar em contato com
-            um de nossos corretores, basta clicar no link a seguir:
-            <a href="#contato" class="link-blue">Corretores</a>
-          </p>
-        </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Serviços</h4>
+        <ul>
+          <li><a href="#servicos">Compra de Imóveis</a></li>
+          <li><a href="#servicos">Venda de Imóveis</a></li>
+          <li><a href="#servicos">Locação</a></li>
+          <li><a href="#servicos">Avaliação Imobiliária</a></li>
+          <li><a href="#servicos">Financiamento</a></li>
+        </ul>
       </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section class="contato" id="contato">
+      <div class="footer__contact-block">
+        <h4 class="footer__heading">Contato</h4>
+        <p>Av. Ayrton Senna, 3000<br>Barra da Tijuca – RJ</p>
+        <p>(21) 3000-0000</p>
+        <p>(21) 99999-9999</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
       <div class="container">
-        <h2 class="section-title">CONTATO</h2>
-        <div class="map-wrap">
-          <iframe
-            title="Localização Belo Horizonte"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234952.5455476862!2d-44.09993!3d-19.9166813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690c5f5f9559b%3A0x5b1b6fecc7b4a72b!2sBelo%20Horizonte%2C%20MG!5e0!3m2!1spt!2sbr!4v1690000000000"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="contato-box">
-          <p>
-            Se ficou interessado em nos conhecer ou se tiver dúvidas entre em
-            <strong class="yellow">contato</strong> conosco através de um dos telefones abaixo:
-          </p>
-        </div>
-        <div class="escritorios">
-          <a href="tel:+553132000001" class="escritorio-link">Escritório Belo Horizonte</a>
-          <a href="tel:+552132000002" class="escritorio-link">Escritório Centro/RJ</a>
-          <a href="tel:+553132000003" class="escritorio-link">Escritório Meier</a>
-        </div>
-        <div class="btn-zap">
-          <a href="https://api.whatsapp.com/send?phone=5531999999999" target="_blank" class="btn-zap-link">
-            <span>Fale conosco via WhatsApp</span>
-          </a>
-        </div>
+        <p>&copy; <span id="year"></span> Imobiliária Santos. Todos os direitos reservados.</p>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; 2026 Imobiliária Santos. Todos os direitos reservados.</p>
-        <p>&copy; DevMendes 2026</p>
-      </div>
-    </footer>
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/5521999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
 
-    <script src="/main.js" type="module"></script>
-  </body>
+  <script src="main.js" type="module"></script>
+</body>
 </html>
